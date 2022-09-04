@@ -103,11 +103,14 @@ function render(handles) {
             </li>
         `
     }
-    ulEl.innerHTML = 'Perfis verificados:' + listItems
+    ulEl.innerHTML = `
+        <hr />
+        <ul  class="lista">Perfis verificados: ${listItems}</ul>
+    `   
+    
 }
 
 deleteBtn.addEventListener("click", function () {
-
     if (mySearch.length == 0) {
         document.getElementById('digitar').innerHTML = 'Não existem perfis verificados.'
     } else {
